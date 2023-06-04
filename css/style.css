@@ -117,7 +117,7 @@ header .cart {
     /* display: block; */
     width: 20%;
     height: 8%;
-    background-image: linear-gradient(to top right, rgb(119, 77, 218), rgb(255, 205, 213));
+    background-image: linear-gradient(to right, hwb(249 35% 7% / 0.925), rgb(250, 99, 212));
     border-radius: 25px;
     text-decoration: none;
     font-size: 100px;
