@@ -1,0 +1,197 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin:0;
+    padding:0;
+    overflow: hidden;
+    background-image: url('/images/background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* height:100vh;
+    width:100vw; */
+    font-family:Georgia, 'Times New Roman', Times, serif;
+   
+}
+
+.photo-container {
+    width: 50vw;
+    height: 100vh;
+    margin:0;
+    padding:0;
+    background-image: url('/images/girl.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position:absolute;
+    bottom: -12%;
+    right:0;
+    /* z-index: 0; */
+}
+
+/* header starts here */
+header {
+    width: 100vw;
+    height: 20vh;
+    z-index: 1;
+    position: absolute;
+    top:0;
+}
+
+/* header logo */
+header .logo {
+    /* display: block; */
+    width: 15%;
+    height: 50%;
+    position: absolute;
+    left: 4%;
+    top:25%;    
+}
+
+header .logo img {
+    width:100%;    
+}
+
+/* header navigation bar */
+header .menu {
+    /* display: block; */
+    width: 40%;
+    height: 50%;
+    position: absolute;
+    left: 25%;
+    top:25% ;   
+}
+
+header .menu ul {
+    display: flex;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header .menu ul li {
+    list-style-type: none;
+}
+
+header .menu ul li a {
+    text-decoration: none;
+    font-size: 100px;
+    color: black;
+}
+
+/* header cart : created using a card and a separate dot */
+header .cart {
+    width: 4%;
+    height: 50%;
+    position: absolute;
+    right: 4%;
+    top:25%;   
+    background-image: url(/images/empty-cart.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+} 
+
+.dot {
+    height: 75px;
+    width: 75px;
+    background-color: red;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    position: absolute;
+    top:-0.05%;
+    right: -12%;  
+}
+
+
+/* main starts here */
+
+/* Linear diagonal gradient button */
+.shaded-button {
+    /* display: block; */
+    width: 20%;
+    height: 8%;
+    background-image: linear-gradient(to top right, rgb(119, 77, 218), rgb(255, 205, 213));
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 100px;
+    color: white;
+    position: absolute;
+    left: 20%;
+    top:28%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+/* Main heading */
+h1 {
+    /* display: block; */
+    width: 25%;
+    height: 12%;
+    position: absolute;
+    left: 20%;
+    top:38%; 
+    font-size: 120px;
+    
+}
+
+/* text part */
+main p.text {
+    /* display: block; */
+    width: 33%;
+    height: 6%;
+    position: absolute;
+    left: 20%;
+    top:52%;
+    font-size: 95px;
+}
+
+/* arrow links */
+.arrow-links {
+    /* display: block; */
+    width: 20%;
+    height: 8%;
+    position: absolute;
+    left: 25%;
+    top: 65%;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* social media links in side bar is fixed in position*/
+aside.social-media {
+    /* display: block; */
+    width: 10vw;
+    height: 22vh;
+    position: fixed;
+    left: 2%;
+    bottom: 32%;
+}
+
+aside.social-media ul{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+aside.social-media ul li {
+    list-style-type: none;
+    width: 30%;
+    height: auto;
+    text-align:start;
+}
+
+aside.social-media ul li a img {
+    width: 50%;
+    height: auto;
+}
