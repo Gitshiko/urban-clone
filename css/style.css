@@ -1,22 +1,25 @@
 * {
     box-sizing: border-box;
+    
 }
 
 body {
     margin:0;
     padding:0;
-    overflow: hidden;
+    width:100vw;
+    height: 100vh;
+    overflow-y: hidden;
     background-image: url('/images/background.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    /* height:100vh;
-    width:100vw; */
+    background-attachment: fixed;    
     font-family:Georgia, 'Times New Roman', Times, serif;
    
 }
 
 .photo-container {
+    display: block;
     width: 50vw;
     height: 100vh;
     margin:0;
@@ -24,9 +27,10 @@ body {
     background-image: url('/images/girl.png');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-    position:absolute;
-    bottom: -12%;
+    background-size: 100%;
+    object-fit: contain;
+    position:absolute; 
+    bottom: -10%;
     right:0;
     /* z-index: 0; */
 }
@@ -38,75 +42,91 @@ header {
     z-index: 1;
     position: absolute;
     top:0;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    /* border: 1px solid red; */
 }
 
 /* header logo */
 header .logo {
-    /* display: block; */
     width: 15%;
     height: 50%;
-    position: absolute;
-    left: 4%;
-    top:25%;    
+    /* border: 1px solid red; */
+    position: relative;
+    left: -4rem;
+    
 }
 
-header .logo img {
-    width:100%;    
+header .logo img { 
+    /* border: 1px solid green; */
+    width:100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 /* header navigation bar */
 header .menu {
-    /* display: block; */
     width: 40%;
     height: 50%;
-    position: absolute;
-    left: 25%;
-    top:25% ;   
+    position: relative;
+    left:-10rem;
+    /* border: 2px solid blue; */
+   
+
 }
 
 header .menu ul {
+    /* border: 2px solid red; */
     display: flex;
     height: 100%;
     justify-content: space-around;
+    gap: 3vw;
     align-items: center;
 }
 
 header .menu ul li {
     list-style-type: none;
+    position: relative;
+    top: -1rem;
 }
 
 header .menu ul li a {
     text-decoration: none;
-    font-size: 100px;
+    font-size: 2vw;
     color: black;
 }
 
 /* header cart : created using a card and a separate dot */
 header .cart {
-    width: 4%;
-    height: 50%;
-    position: absolute;
-    right: 4%;
-    top:25%;   
+    width: 4rem;
+    height: 4rem;
+    position: relative;
+    /*right: 4%;
+    top:25%;    */
     background-image: url(/images/empty-cart.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100%;
+    background-size: cover;
+    /* border: 1px solid red; */
 } 
 
 .dot {
-    height: 75px;
-    width: 75px;
+    height: 2rem;
+    width: 2rem;
+    /* border: 1px solid green; */
     background-color: red;
     border-radius: 50%;
+    text-align: center;
     display: flex;
     justify-content: center;
+    align-items: center;
     color: white;
-    font-size: 50px;
-    font-weight: bold;
+    font-size: 1rem;
+    font-weight: bold; 
     position: absolute;
-    top:-0.05%;
-    right: -12%;  
+    top:-.75rem;
+    right:-.75rem;  
 }
 
 
@@ -114,53 +134,51 @@ header .cart {
 
 /* Linear diagonal gradient button */
 .shaded-button {
-    /* display: block; */
-    width: 20%;
-    height: 8%;
+    width: 18rem;
+    height: 3.5rem;
     background-image: linear-gradient(to right, hwb(249 35% 7% / 0.925), rgb(250, 99, 212));
     border-radius: 25px;
     text-decoration: none;
-    font-size: 100px;
+    font-size: 2vw;
     color: white;
     position: absolute;
-    left: 20%;
-    top:28%; 
+    left: 18%;
+    top: 35%;
     display: flex;
     justify-content: center;
     align-items: center;  
-}
+} 
 
 /* Main heading */
 h1 {
     /* display: block; */
-    width: 25%;
+    width: 40%;
     height: 12%;
     position: absolute;
-    left: 20%;
-    top:38%; 
-    font-size: 120px;
+    left: 18%;
+    top: 45%; 
+    font-size: 3.5vw;
     
 }
 
 /* text part */
 main p.text {
     /* display: block; */
-    width: 33%;
+    width: 45%;
     height: 6%;
     position: absolute;
-    left: 20%;
-    top:52%;
-    font-size: 95px;
+    left: 18%;
+    top: 67%;
+    font-size: 2vw;
 }
 
 /* arrow links */
 .arrow-links {
-    /* display: block; */
     width: 20%;
     height: 8%;
     position: absolute;
     left: 25%;
-    top: 65%;
+    top: 82%;
     display: flex;
     justify-content: space-around;
 }
@@ -180,18 +198,19 @@ aside.social-media ul{
     width: 100%;
     display: flex;
     flex-direction: column;
+    gap: 2vh;
     align-items: flex-start;
     justify-content: space-around;
 }
 
 aside.social-media ul li {
     list-style-type: none;
-    width: 30%;
+    width: 40%;
     height: auto;
     text-align:start;
 }
 
 aside.social-media ul li a img {
-    width: 50%;
+    width: 65%;
     height: auto;
 }
